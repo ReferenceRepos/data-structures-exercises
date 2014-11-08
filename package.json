@@ -1,0 +1,23 @@
+{
+  "name": "dataStructures",
+  "version": "1.0.0",
+  "main": "linkedList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "chai-http": "^1.0.0",
+    "grunt": "^0.4.5",
+    "mocha": "^2.0.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "chai": "^1.9.2",
+    "grunt": "^0.4.5"
+  }
+}

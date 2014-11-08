@@ -1,23 +1,25 @@
-var expression = "1+(3(3+2)/3))+9-(5+2)";
-
-console.log(findFirstMismatchedParen(expression));
-
-
+//returns the index of the first unbalanced paren in a
+//mathematical expressions. returns false if all parens
+//are balanced
 function findFirstMismatchedParen(expression) {
   var array = expression.split("");
 
   var i, parenStack = [];
   var lastParen;
 
+  //loops through entire expression
   for (i = 0; i < array.length; i++) {
     if (array[i] == '(') {
       parenStack.push(new Paren(array[i], i));
     }
     else if (array[i] === ')') {
       lastParen = parenStack.pop();
+
+      // ) is missing
       if(!lastParen) {
         return i;
       }
+      // ( is missing
       else if (lastParen.symbol !== '(') {
         return lastParen.index;
       }
@@ -27,7 +29,7 @@ function findFirstMismatchedParen(expression) {
   if (lastParen) {
     return lastParen.index;
   }
-  return -1;
+  return false;
 }
 
 
@@ -36,4 +38,4 @@ function Paren(symbol, index) {
   this.index = index;
 }
 
-
+module.exports = findFirstMismatchedParen;
