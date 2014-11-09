@@ -1,7 +1,7 @@
 function Node(val) {
   this.value = val;
   this.nextNode = null;
-};
+}
 
 Node.prototype.getNextNode = function(){
   return this.nextNode;

@@ -94,7 +94,7 @@ LinkedList.prototype.back = function(value, n) {
 
   while (currentNode && currentNode.getNextNode().getValue() != value) {
     chaserNode = chaserNode.getNextNode();
-    currentNode = currentNode.getNextNode()
+    currentNode = currentNode.getNextNode();
   }
 
   if (!currentNode.getNextNode()) return false;

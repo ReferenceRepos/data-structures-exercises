@@ -5,6 +5,7 @@ var pm = require('../chapter4/parenMatching.js');
 var elim = require('../chapter4/pez.js');
 var pal = require('../chapter5/palindrome.js');
 var ll = require('../chapter6/LinkedList.js');
+var pf = require('../chapter4/postfix.js');
 
 describe('Paren Matching', function() {
   it('gets returns false in balanced expression', function() {
@@ -17,6 +18,19 @@ describe('Paren Matching', function() {
     expect(pm("3+((4-3)/7-5+1")).to.eql(2);
   });
 })
+
+describe('convert to postfix', function() {
+  it('evaluates long expression correctly', function() {
+    expect(pf("3+2-4+3+3+4-8")).to.eql(3);
+  });
+  it('evaluates trivial case correctly', function() {
+    expect(pf("1")).to.eql(1);
+  });
+  it('evaluates short expression correctly', function() {
+    expect(pf("3-2")).to.eql(1);
+  });
+
+});
 
 
 describe('remove entries from stack', function() {
@@ -41,9 +55,10 @@ describe('tests palindromes', function() {
   it('returns false for no palindrom', function() {
     expect(pal("amacable")).to.eql(false);
   });
+});
 
 describe('tests linked list', function() {
   it('returns true for a palindrome', function() {
     expect(pal("cannac")).to.eql(true);
-
 })
+});
