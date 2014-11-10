@@ -14,7 +14,7 @@ LinkedList.prototype.printList = function() {
     currentNode = currentNode.getNextNode();
   }
 
-  console.log(currentNode.getValue() || 'end');
+  console.log(currentNode.getValue() || 'no entries in list');
 };
 
 //adds a node to the end of the list
@@ -44,11 +44,7 @@ LinkedList.prototype.find = function(value) {
 
 //returns a reference to the first node with a value of "value"
 LinkedList.prototype.findAndShow = function(value) {
-  var currentNode = this.head;
-
-  while (currentNode.getValue() != value) {
-    currentNode = currentNode.getNextNode();
-  }
+  var currentNode = this.find(value);
 
   console.log(currentNode.getValue() || null);
 };
@@ -56,8 +52,9 @@ LinkedList.prototype.findAndShow = function(value) {
 //adds a node to the beginning of the list
 LinkedList.prototype.addToStart = function(value) {
   var temp = new Node(value);
-  temp.setNextNode(head);
-  head = temp;
+  temp.setNextNode(this.head);
+  //console.log(temp);
+  this.head = temp;
 };
 
 LinkedList.prototype.advance = function(value, n) {
@@ -103,9 +100,12 @@ LinkedList.prototype.back = function(value, n) {
   mover = currentNode.getNextNode();
   currentNode.setNextNode(currentNode.getNextNode().getNextNode());
   mover.setNextNode(null);
+
   //adds n links back
   tail = chaserNode.getNextNode().getNextNode();
   chaserNode.setNextNode(mover);
   mover.setNextNode(tail);
 
 };
+
+module.exports = LinkedList;

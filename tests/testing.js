@@ -56,9 +56,3 @@ describe('tests palindromes', function() {
     expect(pal("amacable")).to.eql(false);
   });
 });
-
-describe('tests linked list', function() {
-  it('returns true for a palindrome', function() {
-    expect(pal("cannac")).to.eql(true);
-})
-});
