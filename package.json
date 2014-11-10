@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "linkedList.js",
   "scripts": {
-    "test": "grunt"
+    "test": "node_modules/grunt-cli/bin/grunt"
   },
   "author": "",
   "license": "ISC",
