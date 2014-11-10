@@ -19,7 +19,7 @@ Deque.prototype.addEnd = function(obj) {
 };
 
 Deque.prototype.peekEnd = function() {
-  return this.array[this.array.length-1];
+  return this.array[this.array.length - 1];
 };
 
 Deque.prototype.peekStart = function() {

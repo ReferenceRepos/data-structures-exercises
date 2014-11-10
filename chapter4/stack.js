@@ -1,6 +1,5 @@
 function Stack() {
   this.stack = [];
-
 }
 
 Stack.prototype.push = function(value) {

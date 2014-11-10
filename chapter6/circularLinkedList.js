@@ -1,4 +1,3 @@
-
 var Node = require('./node.js');
 
 var ll = new CircularLinkedList();
@@ -15,9 +14,7 @@ CircularLinkedList.prototype.printList = function() {
     console.log(currentNode.getValue());
     currentNode = currentNode.getNextNode();
   }
-
-  console.log(currentNode.getValue() || "linked list is empty");
-
+  console.log(currentNode.getValue() || 'linked list is empty');
 };
 
 CircularLinkedList.prototype.addToEnd = function(value) {
@@ -27,7 +24,7 @@ CircularLinkedList.prototype.addToEnd = function(value) {
     this.head.setNextNode(this.head);
   }
   else {
-    while(currentNode.getNextNode() && currentNode.getNextNode() != this.head) {
+    while (currentNode.getNextNode() && currentNode.getNextNode() != this.head) {
       currentNode = currentNode.getNextNode();
     }
     currentNode.setNextNode(new Node(value));
@@ -77,4 +74,3 @@ CircularLinkedList.prototype.deleteEveryNthDude = function(n, armySize) {
 ll.deleteEveryNthDude(3, 41);
 
 ll.printList();
-

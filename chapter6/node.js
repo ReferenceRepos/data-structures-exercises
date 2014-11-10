@@ -3,15 +3,15 @@ function Node(val) {
   this.nextNode = null;
 }
 
-Node.prototype.getNextNode = function(){
+Node.prototype.getNextNode = function() {
   return this.nextNode;
 };
 
-Node.prototype.setNextNode = function(node){
+Node.prototype.setNextNode = function(node) {
   this.nextNode = node;
 };
 
-Node.prototype.getValue = function(){
+Node.prototype.getValue = function() {
   return this.value;
 };
 

@@ -12,7 +12,7 @@ module.exports = function(exp) {
     }
   }
   while (operatorStack.peek() && numberStack.peek()) {
-    if (operatorStack.pop() === "+") {
+    if (operatorStack.pop() === '+') {
       numberStack.push(Number(numberStack.pop()) + Number(numberStack.pop()));
     }
     else {
@@ -21,8 +21,3 @@ module.exports = function(exp) {
   }
   return Number(numberStack.pop());
 };
-
-
-
-
-

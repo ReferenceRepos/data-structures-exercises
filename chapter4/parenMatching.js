@@ -9,18 +9,18 @@ function findFirstMismatchedParen(expression) {
 
   //loops through entire expression
   for (i = 0; i < array.length; i++) {
-    if (array[i] == '(') {
+    if (array[i] == "(") {
       parenStack.push(new Paren(array[i], i));
     }
-    else if (array[i] === ')') {
+    else if (array[i] === ")") {
       lastParen = parenStack.pop();
 
       // ) is missing
-      if(!lastParen) {
+      if (!lastParen) {
         return i;
       }
       // ( is missing
-      else if (lastParen.symbol !== '(') {
+      else if (lastParen.symbol !== "(") {
         return lastParen.index;
       }
     }
@@ -31,7 +31,6 @@ function findFirstMismatchedParen(expression) {
   }
   return false;
 }
-
 
 function Paren(symbol, index) {
   this.symbol = symbol;

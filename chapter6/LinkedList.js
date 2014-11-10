@@ -14,7 +14,7 @@ LinkedList.prototype.printList = function() {
     currentNode = currentNode.getNextNode();
   }
 
-  console.log(currentNode.getValue() || "end");
+  console.log(currentNode.getValue() || 'end');
 };
 
 //adds a node to the end of the list
@@ -24,7 +24,7 @@ LinkedList.prototype.addToEnd = function(value) {
     this.head = new Node(value);
   }
   else {
-    while(currentNode.getNextNode()) {
+    while (currentNode.getNextNode()) {
       currentNode = currentNode.getNextNode();
     }
     currentNode.setNextNode(new Node(value));
@@ -35,7 +35,7 @@ LinkedList.prototype.addToEnd = function(value) {
 LinkedList.prototype.find = function(value) {
   var currentNode = this.head;
 
-  while (currentNode && currentNode.getValue() != value){
+  while (currentNode && currentNode.getValue() != value) {
     currentNode = currentNode.getNextNode();
   }
 
@@ -46,7 +46,7 @@ LinkedList.prototype.find = function(value) {
 LinkedList.prototype.findAndShow = function(value) {
   var currentNode = this.head;
 
-  while (currentNode.getValue() != value){
+  while (currentNode.getValue() != value) {
     currentNode = currentNode.getNextNode();
   }
 
@@ -73,7 +73,7 @@ LinkedList.prototype.advance = function(value, n) {
 
   currentNode.setNextNode(currentNode.getNextNode().getNextNode());
 
-  for (var i = 0; i < n; i++){
+  for (var i = 0; i < n; i++) {
     currentNode = currentNode.getNextNode();
   }
 
@@ -109,17 +109,3 @@ LinkedList.prototype.back = function(value, n) {
   mover.setNextNode(tail);
 
 };
-
-
-/*var array = [1,2,3,4,5,6,7,8,9,10];
-var ll = new LinkedList();
-for (var i = 0; i < array.length; i++) {
-  ll.addToEnd(array[i]);
-}
-
-//ll.printList();
-
-ll.advance(5, 2);
-
-ll.printList();
-*/
