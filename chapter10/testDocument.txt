@@ -1,0 +1,9 @@
+Hi! This is a document created to test the program that counts the frequency
+
+
+of     various words that appear in a document. // Some extra characters
+
+
+
+and     spaces are thrown in to test all possible cases. Does capitalization
+matter? dog Dog DOG DOG!!! How many times is that word counted?

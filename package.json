@@ -22,6 +22,8 @@
   },
   "dependencies": {
     "chai": "^1.9.2",
-    "grunt": "^0.4.5"
+    "grunt": "^0.4.5",
+    "string": "^2.2.0",
+    "underscore": "^1.7.0"
   }
 }

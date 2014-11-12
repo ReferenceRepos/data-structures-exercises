@@ -7,14 +7,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      all: ['chapter4/*.js','chapter5/*.js','chapter6/*.js'],
+      all: ['chapter4/*.js','chapter5/*.js','chapter6/*.js', 'chapter10/*.js'],
       options: {
         jshintrc: true
       }
     },
 
     jscs: {
-      src: ['chapter4/*.js','chapter5/*.js','chapter6/*.js'],
+      src: ['chapter4/*.js','chapter5/*.js','chapter6/*.js', 'chapter10/*.js'],
       options: {
         config: '.jscsrc'
       }
